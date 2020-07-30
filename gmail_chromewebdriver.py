@@ -24,7 +24,7 @@ driver.get('https://stackoverflow.com/')  # get stack overflow page
 
 ## Find login button and click it (located by ink text).
 driver.find_element_by_link_text('Log in').click()
-time.sleep(6)   # pause to avoid to be recognise as script
+time.sleep(6)   # pause to avoid CAPTCHA
 
 ## Click on "login via google" in stack overflow (located by xpath).
 main = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="openid-buttons"]/button[1]'))).click()
