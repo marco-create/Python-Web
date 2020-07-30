@@ -68,7 +68,7 @@ try:
                 EC.presence_of_element_located((By.NAME, 'subjectbox'))
     )
     
-    text_subj.send_keys('Test')
+    text_subj.send_keys(subject)
     print('SUBJECT: filled')
     main_box = WebDriverWait(driver,10).until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id=":rt"]/div/div/div/div/div/div/div/div/p[1]'))
