@@ -13,7 +13,7 @@ print('Insert recipient address: ')
 send_to = input()
 print('Insert the subject for your mail: ')
 subject = input()
-print('Write your text below (remember that to wrap the text, you need \\n when you want the text to be wrapped.')
+print('Write your text below (remember that to wrap the text, you need {} when you want the text to be wrapped.'.format(r'\n'))
 maintext = input()
 print('==='*7)
 
@@ -75,7 +75,7 @@ try:
     )                                                                                       
     print('main text-box found') 
     driver.implicitly_wait(3)  
-    main_box.send_keys(maintext)
+    main_box.send_keys(maintext.replace('\\n',' \n'))
     
     ## Send message after waiting 20 seconds so the text will be completely written
     time.sleep(20)
