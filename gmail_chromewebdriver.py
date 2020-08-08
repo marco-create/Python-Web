@@ -62,9 +62,11 @@ try:
     
     text_subj.send_keys(subject)
     print('SUBJECT: filled')
-    main_box = WebDriverWait(driver,10).until(
-                EC.presence_of_element_located((By.XPATH, '//*[@id=":rt"]/div/div/div/div/div/div/div/div/p[1]'))
-    )                                                                                       
+    try:
+        main_box = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH, '//*[@id=":rt"]/div/div/div/div/div/div/div/div/p[1]')))   
+    except:
+        main_box = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id=":rt"]/div/div/div/div/div/div/div/div/p[1]')))
+    finally:
     print('main text-box found') 
     driver.implicitly_wait(3)  
     main_box.send_keys(maintext.replace('\\n',' \n'))
