@@ -1,14 +1,9 @@
 '''
-Import and print topic chosen by the user from Wikipedia
-Libraries:
-- wikipedia
-- wikipediaapi
-
-creation -- MN 11.08.2020
-edited   -- 
+Import and print topic chosen by the user using Wikipedia API and wikipedia library.
 '''
 
 import wikipediaapi, wikipedia
+print('============\nWIKIPEDIA\n============')
 wiki_main = wikipediaapi.Wikipedia('en')
 
 ## select main topic
@@ -31,7 +26,7 @@ try:
     ## enumerate the sections of the chosen page. Decide which one to print or all
     for n,s in enumerate(sections):
         print(n,s)
-    section_idx = input('\nChoose a section (by its index) or type [all] to see: ').lower()
+    section_idx = input('\nChoose a section (by its index) or type [all] to see the entire text: ').lower()
     if section_idx == 'all':
         print(page.text)
     else:
