@@ -10,6 +10,8 @@ selenium.common.exceptions.SessionNotCreatedException: Message: session not crea
 ```
 If such an error comes up, just donwload the appropriate version of Chromedriver.
 
+- [gmail_chromewebdriver.py](https://github.com/marco-create/Python-Web/blob/master/gmail_chromewebdriver.py): send short emails via Gmail. No data stored;
+- [youTube_searchTopic.py](https://github.com/marco-create/Python-Web/blob/master/youtube_searchTopic.py): given a topic, looks for the most recent videos in youtube and return a dictionary pairing {'vid name' : 'vid link'}.
 
   
     
